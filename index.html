@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.50.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>GeoMetry Assignment</title>
+</head>
+<body>
+    <header>
+        <div class="navbar bg-base-100 shadow-2xl bg-[#1090D81A]">
+            <div class="flex-1">
+                <div>
+                    <h1 class="text-5xl font-bold">Interactive</h1>
+                        <p class="text-[#11111199] font-medium text-2xl">Geometry Genius</p>
+                </div>
+              
+            </div>
+            <div class="flex-none">
+              <ul class="menu menu-horizontal px-1">
+                <li><a class=""></a>
+                <!-- The button to open modal -->
+                  <label for="my-modal" class="btn bg-blue-600 text-white text-medium">Blog</label>
+                </li>
+              </ul>
+            </div>
+          </div>
+    </header>
+    <main>
+        <section class="lg:px-12 flex flex-col md:flex-row lg:flex-row gap-4">
+            <div class="geometry-details grid md:grid-cols-2 lg:grid-cols-3 w =[70%] gap-6 mt-8">
+            <div id="first-card" class="card w-full bg-base-100 shadow-xl">
+                <figure class="px-10 pt-10">
+                  <img src="images/triangle.png" alt="" class="rounded-xl" />
+                </figure>
+                <div class="card-body items-center text-center">
+                  <h2 class="card-title text-2xl font-bold" id="first-name">Triangle</h2>
+                  <p class="mb-2">Area (A) = 0.5 X b X h</p>
+                  <div class="flex mb-4">
+                    <input class="bg-[#F1F1F1] text-center w-20 rounded-lg mr-2" type="text" name="" id="first-value" placeholder="b"><label class="" for="">cm</label>
+                    <input class="bg-[#F1F1F1] text-center w-20 rounded-lg ml-2 mr-2" type="text" name="" id="second-value" placeholder="h"><label for="">cm</label>
+                    <i class="fa-solid fa-pen-to-square text-sky-600 ml-2 mt-1.5"></i>
+                  </div>
+                 
+                  <div class="card-actions">
+                    <button id="first-calculation" class="btn btn-wide bg-[#1090D8] border-none">Calculate</button>
+                  </div>
+                </div>
+              </div>
+            <div id="second-card" class="card w-full bg-base-100 shadow-xl">
+                <figure class="px-10 pt-10">
+                  <img src="images/rectangle.png" alt="Shoes" class="rounded-xl" />
+                </figure>
+                <div class="card-body items-center text-center">
+                  <h2 class="card-title text-2xl font-bold" id="rectangle-name">Rectangle</h2>
+                  <p class="mb-2">Area (A) = W X I</p>
+                  <div class="flex mb-4">
+                    <input class="bg-[#F1F1F1] text-center w-20 rounded-lg mr-2" type="text" name="" id="rectangle-first-value" placeholder="w"><label class="" for="">cm</label>
+                    <input class="bg-[#F1F1F1] text-center w-20 rounded-lg ml-2 mr-2" type="text" name="" id="rectangle-second-value" placeholder="I"><label for="">cm</label>
+                    <i class="fa-solid fa-pen-to-square text-sky-600 ml-2 mt-1.5"></i>
+                  </div>
+                 
+                  <div class="card-actions">
+                    <button id="second-calculation" class="btn btn-wide bg-[#1090D8] border-none">Calculate</button>
+                  </div>
+                </div>
+              </div>
+            <div id="third-card" class="card w-full bg-base-100 shadow-xl hover:bg-lime-500">
+                <figure class="px-10 pt-10">
+                  <img src="images/parallelogram.png" alt="Shoes" class="rounded-xl" />
+                </figure>
+                <div class="card-body items-center text-center">
+                  <h2 class="card-title text-2xl font-bold" id="parallelogram-name">Parallelogram</h2>
+                  <p class="mb-2 text-xl">Area (A) = 0.5 X b X h</p>
+                  <div class="flex mb-4">
+                    <p>b= <span id="parallelogram-first-value">10</span>cm, h=<span id="parallelogram-second-value">12</span>cm</p>
+                    <i class="fa-solid fa-pen-to-square text-sky-600 ml-2 mt-1.5"></i>
+                  </div>
+                 
+                  <div class="card-actions">
+                    <button id="third-calculation" class="btn btn-wide bg-[#1090D8] border-none">Calculate</button>
+                  </div>
+                </div>
+              </div>
+            <div id="fourth-card" class="card w-full bg-base-100 shadow-xl hover:bg-lime-500">
+                <figure class="px-10 pt-10">
+                  <img src="images/rhombus.png" alt="Shoes" class="rounded-xl" />
+                </figure>
+                <div class="card-body items-center text-center">
+                  <h2 class="card-title text-2xl font-bold" id="rhombus-name">Rhombus</h2>
+                  <p class="mb-2 text-xl">Area (A) =0.5 X d<sub>1</sub>X d<sub>2</sub></p>
+                  <div class="flex mb-4">
+                    <p>d<sub>1</sub> = <span id="rhombus-first-value">16</span>cm, d<sub>1</sub> = <span id="rhombus-second-value">8</span>cm</p>
+                    <i class="fa-solid fa-pen-to-square text-sky-600 ml-2 mt-1.5"></i>
+                  </div>
+                 
+                  <div class="card-actions">
+                    <button id="fourth-calculation" class="btn btn-wide bg-[#1090D8] border-none">Calculate</button>
+                  </div>
+                </div>
+              </div>
+            <div id="fifth-card" class="card w-full bg-base-100 shadow-xl hover:bg-lime-500">
+                <figure class="px-10 pt-10">
+                  <img src="images/pentagon.png" alt="" class="rounded-xl" />
+                </figure>
+                <div class="card-body items-center text-center">
+                  <h2 class="card-title text-2xl font-bold" id="pentagon-name">Pentagon</h2>
+                  <p class="mb-2 text-xl">Area (A) = 0.5 X P X b</p>
+                  <div class="flex mb-4">
+                    <p>p = <span id="pentagon-first-value">6</span>cm, b = <span id="pentagon-second-value">10</span>cm</p>
+                    <i class="fa-solid fa-pen-to-square text-sky-600 ml-2 mt-1.5"></i>
+                  </div>
+                 
+                  <div class="card-actions">
+                    <button id="fifth-calculation" class="btn btn-wide bg-[#1090D8] border-none">Calculate</button>
+                  </div>
+                </div>
+              </div>
+            <div id="sixth-card" class="card w-full bg-base-100 shadow-xl hover:bg-lime-500">
+                <figure class="px-10 pt-10">
+                  <img src="images/ellipse.png" alt="Shoes" class="rounded-xl" />
+                </figure>
+                <div class="card-body items-center text-center">
+                  <h2 class="card-title text-2xl font-bold" id="ellipse-name">Ellipse</h2>
+                  <p class="text-xl">Area (A) = &#960;ab</p>
+                  <div class="flex mb-4">
+                    <p>a = <span id="ellipse-first-value">10</span>cm, b = <span id="ellipse-second-value">4</span>cm</p>
+                    <i class="fa-solid fa-pen-to-square text-sky-600 ml-2 mt-1.5"></i>
+                  </div>
+                 
+                  <div class="card-actions">
+                    <button id="sixth-calculation" class="btn btn-wide bg-[#1090D8] border-none">Calculate</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="result-details w-[25%] mx-auto">
+              <h3 class="font-xl font-bold text-center underline mt-5">Area Calculation</h3>
+              <div class="overflow-x-auto">
+  <table class="table w-full">
+    <!-- head -->
+   
+    <tbody id="table-container">
+    
+    </tbody>
+  </table>
+</div>
+            </div>
+        </section>
+    </main>
+
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/9bed75c9bb.js" crossorigin="anonymous"></script>
+    <script src="js/index.js"></script>
+    <!-- Model answer -->
+<input type="checkbox" id="my-modal" class="modal-toggle" />
+<div class="modal">
+  <div class="modal-box">
+    <h3 class="font-bold text-lg">All Question Answer is here!!!</h3>
+    <h4>1. What is DOM?what are the purpose of DOM?</h4>
+    <p class="py-4">DOM stands for Document Object Model. It is a programming interface for web documents that represents the web page as a tree-like structure of objects. The purpose of the DOM is to provide a way for web developers to access and manipulate the content and structure of web documents.</p>
+    <p class="py-4">DOM is a crucial part of web development that provides a way to access and manipulate the content and structure of web documents, allowing developers to create dynamic and interactive web applications</p>
+    <h4>2. How can you select DOM?</h4>
+    <p class="py-4">Select elements by tag name: var elements = document.getElementsByTagName("p");
+      Select elements by class name:var elements = document.getElementsByClassName("first-class");
+      Select elements by ID:var element = document.getElementById("his-name");
+      Select elements using CSS selectors: var elements = document.querySelectorAll("#first-element p");
+    </p>
+    <h4>3. What is event bubble?</h4>
+    <p>Event bubbling is a mechanism in web development where events propagate through the DOM tree from the innermost element to the outermost element. It allows events to be handled at multiple levels of the DOM tree, but can also make event handling more complex and may require the use of stopPropagation() method in JavaScript to prevent an event from bubbling up to parent elements.</p>
+    <h4>4. What is callback function? How it's work?</h4>
+    <p>a callback function is a function that is passed as an argument to another function and is executed inside that function.
+      The purpose of a callback function is to allow a function to call another function when a specific event occurs or a specific task is completed
+    </p>
+    <div class="modal-action">
+      <label for="my-modal" class="btn">Answer Completed</label>
+    </div>
+  </div>
+</div>
+</body>
+</html>
